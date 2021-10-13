@@ -19,7 +19,7 @@ while True:
         	sentence = connectionSocket.recv(1024)
 	except OSError as e:
 		err = e.args[0]
-		if err == 11:
+		if err == 11 or err == 10035:
 			# No data is available
 			time.sleep(0.5)
 			continue
